@@ -1,7 +1,11 @@
 const express = require("express");
+const client = require("prom-client"); // ✅ ADD THIS
 
 const app = express();
 const PORT = 3000;
+
+// ✅ Collect default metrics
+client.collectDefaultMetrics();
 
 // Home Page (UI)
 app.get("/", (req, res) => {
@@ -50,6 +54,7 @@ app.get("/", (req, res) => {
         <div class="card">
           <p><a href="/health">Check Health</a></p>
           <p><a href="/info">App Info</a></p>
+          <p><a href="/metrics">Metrics</a></p> <!-- ✅ ADD THIS -->
         </div>
 
         <div style="margin-top:20px; font-size:14px; color:#64748b;">
@@ -72,6 +77,12 @@ app.get("/info", (req, res) => {
     version: "1.0.0",
     developer: "Kalpitha Srinivas"
   });
+});
+
+// ✅ METRICS ENDPOINT (IMPORTANT)
+app.get("/metrics", async (req, res) => {
+  res.set("Content-Type", client.register.contentType);
+  res.end(await client.register.metrics());
 });
 
 app.listen(PORT, () => {
