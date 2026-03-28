@@ -276,17 +276,17 @@ scrape_configs:
 
 ## 🖥️ Application Dashboard
 
-![Dashboard]<img width="1919" height="945" alt="image" src="https://github.com/user-attachments/assets/93471757-65aa-4b5a-9cb8-3174c3716d5f" />
+http://100.52.186.110:3000/<img width="1919" height="945" alt="image" src="https://github.com/user-attachments/assets/93471757-65aa-4b5a-9cb8-3174c3716d5f" />
 
 
 ## 📊 Grafana Dashboard
 
-![Grafana]<img width="1911" height="955" alt="image" src="https://github.com/user-attachments/assets/5a0add71-645f-4b6a-8f77-611deac568c6" />
+http://100.52.186.110:3001/dashboards<img width="1911" height="955" alt="image" src="https://github.com/user-attachments/assets/5a0add71-645f-4b6a-8f77-611deac568c6" />
 
 
 ## 📡 Prometheus Targets
 
-![Prometheus]<img width="1907" height="910" alt="image" src="https://github.com/user-attachments/assets/db5e5523-323f-41f5-b7a1-9057f14a8a08" />
+http://100.52.186.110:9090/targets<img width="1907" height="910" alt="image" src="https://github.com/user-attachments/assets/db5e5523-323f-41f5-b7a1-9057f14a8a08" />
 
 
 ## ⚙️ CI/CD Pipeline
